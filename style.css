@@ -45,25 +45,19 @@ body{
     
 }
 
-/* Default styles for larger screens */
-.container {
+.container{
     width: 80%;
+    background: #4542;
     max-width: 300px;
-    height: 100vh;
+    height:100dvh;
     max-height: 600px;
-    /* Your other styles here */
-}
-
-/* Media query for screens with a maximum width of 480px (typical for smartphones) */
-@media (max-width: 480px) {
-    .container {
-        width: 95%; /* Adjust the width for smaller screens */
-        max-width: none; /* Remove the maximum width constraint */
-        height: 95vh; /* Adjust the height for smaller screens */
-        max-height: none; /* Remove the maximum height constraint */
-        border-radius: 0; /* Optionally remove border radius */
-        /* Your other styles here */
-    }
+    border: 2px solid #B0B0B0;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-align: center;
 }
 
 .buttons{
