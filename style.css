@@ -1,106 +1,93 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    
-}
-body{
-    background: #fff;
-    display: flex;
-    margin: 25px auto;
-    justify-content: center;
-    align-items: center;
-}
-.screen{
-    width: 100%;
-    padding-bottom: 10px;
-    overflow-y: auto; 
-    max-height: 150px;
-    /* border: 1px solid #ccc; */
-    width: 320px;
-    height: 100px;
-    background: #909979;
-    display: flex;
-    /* align-items: start; */
-    
-}
-.problem{
-    width: 60%;
-    height: 50px;
-    display: flex;
-    justify-content: start;
-    font-weight: bolder;
-    margin: 7px;
-    font-size: 28px;
-    /* overflow: scroll; */      
-}
-.solution{
-    font-size: 25px;
-    display: flex;
-    align-items: end;
-    width: 40%;
-    font-weight: bold;
-    color: #fff;
-    
 }
 
-.container{
-    width: 80%;
+body {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the calculator takes up the full height of the viewport */
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 320px; /* Adjusted maximum width for mobile screens */
     background: #4542;
-    max-width: 300px;
-    height:100dvh;
-    max-height: 600px;
     border: 2px solid #B0B0B0;
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
     text-align: center;
+    overflow: hidden; /* Hide overflowing content on small screens */
 }
-.buttons{
+
+.screen {
+    padding-bottom: 10px;
+    overflow-y: auto;
+    max-height: 150px;
+    background: #909979;
+    display: flex;
+    flex-direction: column; /* Display problem and solution vertically */
+    align-items: flex-end; /* Align content to the right */
+}
+
+.problem,
+.solution {
+    width: 100%; /* Take up the full width of the screen */
+    font-weight: bold;
+    font-size: 28px;
+    padding: 5px;
+}
+
+.solution {
+    font-size: 25px;
+    color: #fff;
+    background: #4542; /* Match the background color of the container */
+}
+
+.buttons {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Adjusted for mobile layout */
+    gap: 10px; /* Reduced gap between buttons */
+    padding: 0 10px; /* Add horizontal padding for better spacing */
 }
-.butts{
-    margin: 15px;
-    border: #B0B0B0;
-    padding: 5px;
+
+.butts {
+    border: none;
+    padding: 15px 0;
     background: #fff;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     box-shadow: 2px 3px grey;
-    transition: 1ms;
-    -webkit-transition: 1ms;
-    -moz-transition: 1ms;
-    -ms-transition: 1ms;
-    -o-transition: 1ms;
+    font-size: 24px; /* Adjusted font size for mobile */
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
-.buttons :hover{
+
+.butts:hover {
     background: rgb(128, 128, 128);
     box-shadow: 2px 3px #fff;
     color: #fff;
 }
 
-.clear{
-    column-span: 3;
-    background-color: #E31837;
+.clear {
+    grid-column: span 2; /* Span two columns for "CLEAR" button */
 }
-#copyRight{
+
+#copyRight {
     margin: 18px;
 }
-#del{
+
+#del {
     background: #007FFF;
 }
-.equal{
+
+.equal {
     background: #03C03C;
 }
-small{
+
+small {
     color: grey;
 }
